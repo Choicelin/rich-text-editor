@@ -6,7 +6,6 @@
 
 
 (function () {
-  console.log(1)
   var toBoldEle = document.getElementById('bold')
   toBoldEle.addEventListener('click', function () {
     document.execCommand('bold', true, null)
