@@ -6,10 +6,19 @@
 
 
 (function () {
+
+  var editorEle = document.getElementById('editor')
+
   var toBoldEle = document.getElementById('bold')
   var boldToggle = false
   toBoldEle.addEventListener('click', function () {
     boldToggle = !boldToggle
     document.execCommand('bold', boldToggle, null)
+  })
+
+  var blockquoteEle = document.getElementById('blockquote')
+  blockquoteEle.addEventListener('click', function() {
+    editorEle.focus()
+    document.execCommand('formatBlock', true, 'blockquote')
   })
 })()
