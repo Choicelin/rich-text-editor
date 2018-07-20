@@ -7,7 +7,9 @@
 
 (function () {
   var toBoldEle = document.getElementById('bold')
+  var boldToggle = false
   toBoldEle.addEventListener('click', function () {
-    document.execCommand('bold', true, null)
+    boldToggle = !boldToggle
+    document.execCommand('bold', boldToggle, null)
   })
 })()
